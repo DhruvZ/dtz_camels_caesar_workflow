@@ -3,16 +3,13 @@
 #SBATCH --output=array_caesar_%A-%a.log
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=d.zimmerman@ufl.edu
-#SBATCH --ntasks=8
+#SBATCH --ntasks=16
 #SBATCH --nodes=1
 #SBATCH --mem=120gb
 #SBATCH --account=narayanan
 #SBATCH --qos=narayanan-b
 #SBATCH --time=10:00:00
-#SBATCH --array=90
-
-
-#14,18,24,28,32-90:2%10
+#SBATCH --array=14,18,24,28,32-90:2%10
 
 date;hostname;pwd;
 cd /home/d.zimmerman

@@ -11,7 +11,7 @@ base_path = '/orange/narayanan/d.zimmerman/camels_caesar_catalogs_gen/'
 
 sim_id = f'{sim}/{suite_name}/{run_id}'
 sim_dir = f'{base_path}/Sims/{sim_id}/'
-pro = 1
+pro = 8
 
 print('sim: ',sim_id)
 print('snap: ',snap_num)
