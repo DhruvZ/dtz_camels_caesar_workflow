@@ -2,8 +2,8 @@ import numpy as np
 import scipy as sp
 import sys,os
 
-sims_list = ['SIMBA','IllustrisTNG']
-suite_list = ['1P','CV','EX','BE','LH']
+sims_list = ['IllustrisTNG']#['SIMBA','IllustrisTNG']
+suite_list = ['SB28']#['1P','CV','EX','BE','LH']
 
 p_list = ['n2','n1','1','2']
 
@@ -34,6 +34,11 @@ for suite in suite_list:
         elif(suite =='BE'):
             for i in range(27):
                 temp = [suite,sim,f'BE_{i}']
+                print(temp)
+                res_list.append(temp)
+        elif(suite == 'SB28'):
+            for i in range(2048):
+                temp = [suite,sim,f'SB28_{i}']
                 print(temp)
                 res_list.append(temp)
         else:

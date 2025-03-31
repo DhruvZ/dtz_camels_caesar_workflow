@@ -5,11 +5,14 @@
 #SBATCH --mail-user=d.zimmerman@ufl.edu
 #SBATCH --ntasks=16
 #SBATCH --nodes=1
-#SBATCH --mem=120gb
+#SBATCH --mem=300gb
 #SBATCH --account=narayanan
 #SBATCH --qos=narayanan-b
 #SBATCH --time=10:00:00
-#SBATCH --array=14,18,24,28,32-90:2%10
+#SBATCH --array=0-90:2%10
+#####COMMENT SBATCH --array=0-90:2%10
+#### COMMENT #SBATCH --partition=bigmem
+#14,18,24,28,32-90:2%10
 
 date;hostname;pwd;
 cd /home/d.zimmerman
@@ -20,8 +23,8 @@ conda activate /blue/narayanan/d.zimmerman/code_environments/caesar_camels_envir
 
 module load git
 module load gcc/12.2.0
-module load openmpi/4.1.5
-module load hdf5/1.14.1
+module load openmpi/4.1.6
+module load hdf5/1.14.5
 
 cd /orange/narayanan/d.zimmerman/camels_caesar_catalogs_gen/caesar_scripts/
 
